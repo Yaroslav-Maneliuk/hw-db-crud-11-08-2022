@@ -119,3 +119,21 @@ WHERE "diameter" BETWEEN 25 AND 33 OR "price" BETWEEN 100 AND 200;
 SELECT *
 FROM "pizzas"
 WHERE "diameter" = 22 OR "price" = 180;
+
+
+--Задачи на DELETE
+--Удалите пиццу с id=3, верните результат.
+DELETE FROM "pizzas"
+WHERE "id" = 3
+RETURNING *;
+
+
+--Удалите Пепперони.
+DELETE FROM "pizzas"
+WHERE "name" = 'Pepperoni';
+
+
+--Удалите все пиццы, у которых диаметр 18, верните результат.
+DELETE FROM "pizzas"
+WHERE "diameter" = 18
+RETURNING *;
